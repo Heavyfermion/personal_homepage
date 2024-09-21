@@ -100,3 +100,15 @@
     
 })(jQuery);
 
+//let 
+
+
+//시우 KTX vs Airplain 게임용 애니메이션 
+function animationAirplain(){
+
+}
+
+function animationKTX(){
+
+}
+
