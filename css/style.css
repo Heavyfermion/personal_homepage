@@ -9870,3 +9870,110 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 0;
   list-style-type: none;
 }
+
+/* airplane animation */
+.sky{
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  background-color: #00ccff;
+  overflow-x: hidden;
+}
+.clouds{
+  position: absolute;
+  top:50px;
+  height: 100px;
+  right: 0;
+  left: -2000px;
+  width: 500%;
+  background-image: url(https://i.ibb.co/7S6qn59/clouds.png);
+  background-repeat: repeat-x;
+  animation: clouds 50s linear infinite;
+}
+@keyframes clouds{
+  100%{
+    transform: translateX(2000px);
+  }
+}
+.mountains{
+  position: relative;
+  bottom:10;
+  height: 250px;
+  right: 0;
+  left: -2000px;
+  width: 500%;
+  background-image: url(https://i.ibb.co/zJbfkgZ/mountain.png);
+  background-repeat: repeat-x;
+  animation: mountains 10s linear infinite;
+}
+@keyframes mountains{
+  100%{
+    transform: translateX(2000px);
+  }
+}
+
+.airplane{
+  top: 150px;
+  left:40%;
+  position: absolute;
+  z-index: 1;
+}
+  
+.flame{
+  top: -40px;
+  left: 150px;
+  height: 10px;
+  width:60px;
+  position: relative;
+  border-radius: 50%;
+  background-color: #ffffff;
+  animation: flame 0.3s linear infinite;
+   z-index: -1;
+}
+.flame2{
+  top: -195px;
+  left: 115px;
+}
+@keyframes flame{
+  0%{
+    transform: translateX(0%);
+  }
+  50%{
+    transform: translateX(50%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+
+/*train animation for ktx */
+@keyframes trainAnimation {
+  0% {
+    transform: translate(2500px, calc(-1 * 2500px * 0.57735026919));
+  }
+
+  35% {
+    transform: translate(0);
+  }
+
+  65% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-2500px, calc(2500px * 0.57735026919));
+  }
+}
+
+#Train1 {
+  animation: trainAnimation 15s ease-in-out infinite;
+  animation-fill-mode: forwards;
+  transform: translate(2500px, calc(-1 * 2500px * 0.57735026919));
+}
+
+#Train2 {
+  animation: trainAnimation 16s 3s ease-in-out infinite reverse;
+  animation-fill-mode: forwards;
+  transform: translate(-2500px, calc(2500px * 0.57735026919));
+}
+
