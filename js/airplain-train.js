@@ -34,7 +34,6 @@ function handleGameState(gameState){
         $(".airplain").hide();
         $(".ktx").hide(); 
         $(".select-text").text("시작합니다.");
-
     }
 }
 
