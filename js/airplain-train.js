@@ -38,6 +38,7 @@ function handleGameState(gameState){
         $(".airplain").hide();
         $(".ktx").hide(); 
         $(".select-text").text("시작합니다.");
+        
         setTimeout(function(){
             alert("목적지를 섞을게요!");
         }, 100);
@@ -47,12 +48,7 @@ function handleGameState(gameState){
             $(".select-text").text(`선택한 목적지는 ${destinations[selectedIndex]}입니다.`);
             gameState.destination = destinations[selectedIndex];
             gameState.status = "targetSelected";
-            handleGameState(gameState);
         }, 200);
-    }
-
-    if(gameState.status == "targetSelected"){
-        $(".select-text").text("목적지로 출발 하겠습니다.");
     }
 }
 
