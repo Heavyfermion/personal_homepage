@@ -10,6 +10,7 @@ let gameState = {
 //교통편 도착 지점
 let ktxStations = ["행신", "서울", "덕소", "청량리", "상봉", "양평", "만종", "횡성", "둔내", "평창", "진부", "강릉"]; //강릉선 - 강릉까지만 작성
 let airPlainStations = ["김포 공항", "양양 공항"];
+let destinations = ["대전역", "청주공항", "부산", "강릉"];
 
 //시작 화면 버튼 이벤트
 $(".airplain").click(function(){
@@ -34,6 +35,10 @@ function handleGameState(gameState){
         $(".airplain").hide();
         $(".ktx").hide(); 
         $(".select-text").text("시작합니다.");
+        setTimeout(200, function(){
+            alert("목적지를 섞을 게요!");
+        });
+        
     }
 }
 
